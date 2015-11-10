@@ -61,3 +61,14 @@ DEFINITIONS:
 	#mainDiv:
 
 		The #mainDiv is a div with the id of #mainDiv. This is the div found in the file index.php which allows the content of the site to be dynamically updated through loading the content into the #mainDiv. The #mainDiv dimension is col-md-2, col-sm-3 and hidden-xs. With #mainDiv.height() >=< window.height().
+
+*-----------------*
+FRAMEWORKS:
+
+	Chart.js:
+
+		This framework is contained under the file components with the name Chart.js-master. This framework is used primarly in the portfolio and stock content of the website. It is used for displaying asstetically pleasing graphs with the highest amount of information for the user. The framework uses primarly javascript for it functionality.
+
+	Bootstrap:
+
+		This framework is used to easly display information within the website. It is ONLY used for displaying the information in an clean and easy to use way. The framework uses classes for its functionality. 
