@@ -1,4 +1,4 @@
-<html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,7 +25,7 @@
 	<div class="row">
 		<div class="col-md-2 col-sm-3 hidden-xs">
 			<div class="navbar-default sidebar" role="navigation">
-				<div class="sideBarId" class="sidebar-nav navbar-collapse">
+				<div id="sideBarId" class="sidebar-nav navbar-collapse">
 					<ul class="nav" id="side-menu">
 						<li>
 							Portfolio
@@ -48,5 +48,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- Used for Graphs -->
+    <script src="components/Chart.js-master/Chart.js"></script>
+    <!-- Tool Set -->
+    <script src="js/tools.js"></script>
+    <!-- Change Content of Whole Page -->
+    <script src="js/main.js"></script>
 </body>
 </html>

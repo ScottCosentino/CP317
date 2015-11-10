@@ -49,6 +49,26 @@ DESCRIPTION:
 	This is file is used for signing in the user. With the sign in contained within its own file it can be called throughout the project which allows the website to be a lighter version than having several instances of the same thing.
 
 *-----------------*
+FILE: tools.js
+CREATED BY: Matthew Warner - 130151700
+DESCRIPTION:
+	
+	This file is used for all of the different contents found within the website that need constant updating or changes after an event.
+
+	FUNCTIONS:
+
+		resizeSideBar()
+
+			This function resizes the sidebar so that the height of the sidebar ALWAYS extends the height of the window. The function gathers both the #mainDiv height and the window height and compares which one is larger and sets the #sideBarId to the larger of the two.
+
+*-----------------*
+FILE: main.js
+CREATED BY: Matthew Warner - 130151700
+DESCRIPTION:
+	
+	This file is used for all of the javacsript needed in the template of the site. This includes the #sideBarId and the navigation bar located at the top of the window.
+
+*-----------------*
 GENERAL NOTES:
 
 	Reasoning for .load()
@@ -60,7 +80,11 @@ DEFINITIONS:
 
 	#mainDiv:
 
-		The #mainDiv is a div with the id of #mainDiv. This is the div found in the file index.php which allows the content of the site to be dynamically updated through loading the content into the #mainDiv. The #mainDiv dimension is col-md-2, col-sm-3 and hidden-xs. With #mainDiv.height() >=< window.height().
+		The #mainDiv is a div with the id of #mainDiv. This is the div found in the file index.php which allows the content of the site to be dynamically updated through loading the content into the #mainDiv. The #mainDiv dimension is col-md-10 and col-sm-9 . The height of #mainDiv is ALWAYS the height of the window.
+
+	#sideBarId
+
+		The #sideBarId is a div which is always located to the left of the window. This div is used to house all of the tab options within our site. It is used for the user to easily move around AdviseMe. The #sideBarId dimension is col-md-2 col-sm-3 and hidden-xs. With #sideBarId.height() ALWAYS extending the height of the window.
 
 *-----------------*
 FRAMEWORKS:

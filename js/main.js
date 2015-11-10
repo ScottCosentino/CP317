@@ -1,16 +1,11 @@
-function resizeSideBar() {
-	$("#sideBarId").height(0);
-	var main = $("#mainDiv").height();
-	var doc = $(window).height();
-	if (main >= doc) {
-		$("#sideBarId").height(main);
-	}else {
-		$("#sideBarId").height(doc);
-	}
-}
+$(document).ready(function() {
+	portfolioShow();
+});
 
 function portfolioShow() {
-
+	$("#mainDiv").load("php/portfolio.php" , function() {
+		resizeSideBar();
+	});
 }
 
 function stockShow() {
