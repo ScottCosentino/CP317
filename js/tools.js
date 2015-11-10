@@ -7,6 +7,4 @@ function resizeSideBar() {
 	}else {
 		$("#sideBarId").height(win);
 	}
-	var size = $("#sideBarId").height();
-	alert(size);
 }

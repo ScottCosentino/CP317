@@ -37,12 +37,12 @@
 				</div>
 			</div> <!-- /.navbar-default -->
 		</div>
-	</div> <!-- /.row -->
-	<!-- MainArea -->
-	<div class="col-md-10 col-sm-9">
-		<div id="mainDiv">
+		<!-- MainArea -->
+		<div class="col-md-10 col-sm-9">
+			<div id="mainDiv">
+			</div>
 		</div>
-	</div>
+	</div> <!-- /.row -->
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
