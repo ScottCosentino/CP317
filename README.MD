@@ -69,6 +69,13 @@ DESCRIPTION:
 	This file is used for all of the javacsript needed in the template of the site. This includes the #sideBarId and the navigation bar located at the top of the window.
 
 *-----------------*
+FILE: stockgraphs.js
+CREATED BY: Matthew Warner - 130151700
+DESCRIPTION:
+	
+	This file is used as a utility. Its purpose is to dynamically create a line graph that can be included throughout the website.
+
+*-----------------*
 GENERAL NOTES:
 
 	Reasoning for .load()

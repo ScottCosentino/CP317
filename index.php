@@ -8,6 +8,7 @@
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    
 </head>
 <body>
 	<!-- Navigation -->
@@ -33,6 +34,9 @@
 						<li>
 							Stocks
 						</li>
+						<li>
+							News
+						</li>
 					</ul>
 				</div>
 			</div> <!-- /.navbar-default -->
@@ -48,11 +52,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <!-- Used for Graphs -->
-    <script src="components/Chart.js-master/Chart.js"></script>
     <!-- Tool Set -->
     <script src="js/tools.js"></script>
     <!-- Change Content of Whole Page -->
     <script src="js/main.js"></script>
+    <script src="components/Highstock/js/highstock.js"></script>
+	<script src="components/Highstock/js/modules/exporting.js"></script>
+	<script src="js/candleGraph.js"></script>
 </body>
 </html>

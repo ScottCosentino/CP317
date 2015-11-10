@@ -15,16 +15,9 @@
 	<!-- Tab Panes -->
 	<div class="tab-content">
 		<div role="tabpanel" class="tab-pane active" id="myStocks">
-			<div id="myStockDiv">
-				<?php
-					$x = 0;
-
-					while ($x <= 2) {
-						include("stockgraphs.php");
-						$x++;
-					}
-				?>
-			</div>
+			
+			<div id="container" style="width:100%; height:600px;"></div>
+			
 		</div> <!-- /.myStocks -->
 		<div role="tabpanel" class="tab-pane" id="myStats">
 		</div> <!-- /.myStats -->
