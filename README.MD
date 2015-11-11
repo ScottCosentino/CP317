@@ -74,7 +74,7 @@ FRAMEWORKS:
 		This framework is used to easly display information within the website. It is ONLY used for displaying the information in an clean and easy to use way. The framework uses classes for its functionality. 
 		
 
-*------------------*
+*-----------------*
 YAHOO FINANCE QUERIES AND RESULTS:
 
 "select * from yahoo.finance.quotes where symbol in ('" + symbol + "')"
@@ -98,3 +98,4 @@ select * from   yahoo.finance.historicaldata
 Accessing the data: data.query.results.quote is an array of n elements that contains each dates historic infomation
 Ex: data.query.results.quote[0].Close gives the closing price for 2014-02-11
 The highest number value contains the start date quote. The lowest number value contains the end date quote
+*-----------------*
