@@ -104,10 +104,12 @@ The highest number value contains the start date quote. The lowest number value 
 OBJECTS
 
 NOTE: More will be added to this function later and it needs to be refined a bit. This is just a working concept
+
 StockInfo(historical){
 this.historicaldata = historical;
 }
 
 Usage: this.historical takes on the value of the historical values of a stock
+
 Creating a new StockInfo object:
 var StockInfo1 = new StockInfo(data.query.results.quote)
