@@ -99,3 +99,15 @@ Accessing the data: data.query.results.quote is an array of n elements that cont
 Ex: data.query.results.quote[0].Close gives the closing price for 2014-02-11
 The highest number value contains the start date quote. The lowest number value contains the end date quote
 *-----------------*
+
+*-----------------*
+OBJECTS
+
+NOTE: More will be added to this function later and it needs to be refined a bit. This is just a working concept
+StockInfo(historical){
+this.historicaldata = historical;
+}
+
+Usage: this.historical takes on the value of the historical values of a stock
+Creating a new StockInfo object:
+var StockInfo1 = new StockInfo(data.query.results.quote)
