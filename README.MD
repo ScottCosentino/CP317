@@ -87,3 +87,14 @@ YAHOO FINANCE QUERIES AND RESULTS:
 	-Day High
 	-Day Range
 	-And much more
+
+Historical data:
+
+select * from   yahoo.finance.historicaldata
+         where  symbol    = "AAPL"
+         and    startDate = "2012-09-11"
+         and    endDate   = "2014-02-11"
+         
+Accessing the data: data.query.results.quote is an array of n elements that contains each dates historic infomation
+Ex: data.query.results.quote[0].Close gives the closing price for 2014-02-11
+The highest number value contains the start date quote. The lowest number value contains the end date quote
