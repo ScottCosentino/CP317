@@ -72,3 +72,18 @@ FRAMEWORKS:
 	Bootstrap:
 
 		This framework is used to easly display information within the website. It is ONLY used for displaying the information in an clean and easy to use way. The framework uses classes for its functionality. 
+		
+
+*------------------*
+YAHOO FINANCE QUERIES AND RESULTS:
+
+"select * from yahoo.finance.quotes where symbol in ('" + symbol + "')"
+	-All general information including:
+	-Ask
+	-Bid
+	-Change
+	-Currency
+	-Day Low
+	-Day High
+	-Day Range
+	-And much more
