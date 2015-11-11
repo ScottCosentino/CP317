@@ -32,6 +32,7 @@ function getData() {
 			
 			//Generates a new stock info object, with the query quotes as its historicalvals
 			var StockInfo1 = new StockInfo(data.query.results.quote);
+			console.log(StockInfo1)
 			
         })
 		//Function to handle a failure in query.
