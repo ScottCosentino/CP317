@@ -15,7 +15,6 @@
 	<!-- Tab Panes -->
 	<div class="tab-content">
 		<div role="tabpanel" class="tab-pane active" id="myStocks">
-			
 			<div id="container" style="width:100%; height:600px;"></div>
 			
 		</div> <!-- /.myStocks -->

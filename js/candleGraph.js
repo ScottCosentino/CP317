@@ -1,4 +1,12 @@
 function newCTandVol() {
+    var stockInfo = new StockInfo();
+    //stockInfo.retrieveStock();
+    //console.log(stockInfo.getData());
+    console.log(stockInfo.getStock());
+    //how do i get the data out of the get Data function?
+}
+
+function newCandVol() {
     $.getJSON('http://www.highcharts.com/samples/data/jsonp.php?filename=aapl-ohlcv.json&callback=?', function (data) {
 
         // split the data set into ohlc and volume
