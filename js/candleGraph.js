@@ -2,7 +2,7 @@ function newCTandVol() {
     var stockInfo = new StockInfo();
     //stockInfo.retrieveStock();
     //console.log(stockInfo.getData());
-    console.log(stockInfo.getStock());
+    console.log(stockInfo.getData());
     //how do i get the data out of the get Data function?
 }
 
