@@ -1,4 +1,4 @@
-.body,.html {
+body,html {
 	overflow: hidden;
 }
 
@@ -8,49 +8,45 @@
 	overflow: hidden;
 	height: 120px;
 	width: 200px;
-	z-index: -1;
+	z-index: 1;
+	background-color: black;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 0;
+}
+
+.recStock .panel-body {
+	padding-left: 0;
+	padding-right: 0;
 }
 
 #topRowStocks {
 	white-space: nowrap;
-}
-
-#topStock1 {
-	background-color: green;
-}
-
-#topStock2 {
-	background-color: blue;
-}
-
-#topStock3 {
 	background-color: black;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 0px;
+	z-index: -1;
 }
 
-#topStock4 {
-	background-color: red;
+#firstRow {
+	padding-left: 0;
+	margin-left: 0;
 }
 
-#topStock5 {
-	background-color: cyan;
+#firstCol {
+	padding-left: 0;
+	margin-left: -15px;
 }
 
-#topStock6 {
-	background-color: purple;
+#sideBar {
+	z-index: 2;
 }
 
-#topStock7 {
-	background-color: yellow;
-}
-
-#topStock8 {
-	background-color: orange;
-}
-
-#topStock9 {
-	background-color: #973206;
-}
-
-#topStock10 {
-	background-color: #239782;
+#mainDiv {
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-left: 0px;
+	margin-right: 0px;
 }

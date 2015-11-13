@@ -24,7 +24,7 @@
 	</nav> <!-- /.nav -->
 	<!-- SideBar -->
 	<div class="row">
-		<div class="col-md-2 col-sm-3 hidden-xs">
+		<div id="sideBar" class="col-md-2 col-sm-3 hidden-xs">
 			<div class="navbar-default sidebar" role="navigation">
 				<div id="sideBarId" class="sidebar-nav navbar-collapse">
 					<ul class="nav" id="side-menu">
@@ -42,59 +42,61 @@
 			</div> <!-- /.navbar-default -->
 		</div>
 		<!-- MainArea -->
-		<div class="col-md-10 col-sm-9">
-			<div class="row" id="topRowStocks">
+		<div id="firstCol" class="col-md-10 col-sm-9">
+			<div id="firstRow" class="row">
+				<div id="topRowStocks">
 				<div id="topStock1" class="panel panel-default recStock">
 					<div class="panel-body">
-
+						<p>This is a bunch of text so yea have a good day</p>
 					</div>
 				</div>
 				<div id="topStock2" class="panel panel-default recStock">
 					<div class="panel-body">
-
+						<p>This is a bunch of text so yea have a good day</p>
 					</div>
 				</div>
 				<div id="topStock3" class="panel panel-default recStock">
 					<div class="panel-body">
-
+						<p>This is a bunch of text so yea have a good day</p>
 					</div>
 				</div>
 				<div id="topStock4" class="panel panel-default recStock">
 					<div class="panel-body">
-
+						<p>This is a bunch of text so yea have a good day</p>
 					</div>
 				</div>
 				<div id="topStock5" class="panel panel-default recStock">
 					<div class="panel-body">
-
+						<p>This is a bunch of text so yea have a good day</p>
 					</div>
 				</div>
 				<div id="topStock6" class="panel panel-default recStock">
 					<div class="panel-body">
-
+						<p>This is a bunch of text so yea have a good day</p>
 					</div>
 				</div>
 				<div id="topStock7" class="panel panel-default recStock">
 					<div class="panel-body">
-
+						<p>This is a bunch of text so yea have a good day</p>
 					</div>
 				</div>
 				<div id="topStock8" class="panel panel-default recStock">
 					<div class="panel-body">
-
+						<p>This is a bunch of text so yea have a good day</p>
 					</div>
 				</div>
 				<div id="topStock9" class="panel panel-default recStock">
 					<div class="panel-body">
-
+						<p>This is a bunch of text so yea have a good day</p>
 					</div>
 				</div>
 				<div id="topStock10" class="panel panel-default recStock">
 					<div class="panel-body">
-
+						<p>This is a bunch of text so yea have a good day</p>
 					</div>
 				</div>
 			</di>
+			</div>
 			<div id="mainDiv" class="row">
 			</div>
 		</div>
