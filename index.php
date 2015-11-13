@@ -22,8 +22,8 @@
 			<a class="navbar-brand" href="index.php">AdviseMe</a>
 		</div> <!-- /.navbar-header -->
 	</nav> <!-- /.nav -->
-	<!-- SideBar -->
 	<div class="row">
+		<!-- SideBar -->
 		<div id="sideBar" class="col-md-2 col-sm-3 hidden-xs">
 			<div class="navbar-default sidebar" role="navigation">
 				<div id="sideBarId" class="sidebar-nav navbar-collapse">
@@ -47,8 +47,22 @@
 				<div id="topRowStocks">
 				<div id="topStock1" class="panel panel-default recStock">
 					<div class="panel-body">
-						<p>This is a bunch of text so yea have a good day</p>
-					</div>
+						<div class="row">
+							<div class="col-lg-10">
+								<div class="row">
+									<p id="tickerPanel1"></p>
+								</div> <!-- /.ticker -->
+								<div class="row"> 
+									<p id="pricePanel1"></p>
+								</div> <!-- /.price -->
+							</div> <!-- /.col-10-lg -->
+							<div class="col-lg-2">
+								<div class="row">
+									<p id="upDownPanel1"></p>
+								</div> <!-- /.up/down -->
+							</div> <!-- /.col-2-lg -->
+						</div>
+					</div> <!-- /. panel-body -->
 				</div>
 				<div id="topStock2" class="panel panel-default recStock">
 					<div class="panel-body">
@@ -101,6 +115,11 @@
 			</div>
 		</div>
 	</div> <!-- /.row -->
+	<footer class="footer">
+		<div class="container">
+			<p>Here is some text</p>
+		</div>
+	</footer>
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

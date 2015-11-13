@@ -16,9 +16,9 @@ $(document).ready(function() {
 		}
 	}
 
-	setInterval(function() {
+	var timer = setInterval(function() {
 		moveStocks(stocks);
-	},10);
+	},60);
 
 	var count = 0;
 
@@ -26,12 +26,10 @@ $(document).ready(function() {
 		var i = 0;
 
 		for (i; i <= stocks.length - 1; i++) {
-			console.log(i);
 			var offset = $("#" + stocks[i]).offset();
 			var temp = offset.left + 1;
 			$("#" + stocks[i]).offset({'left':temp});
 			if (count >= STOCKS_WIDTH) {
-				console.log("switch");
 				var holder = stocks.pop();
 				stocks.unshift(holder);
 				$("#" + holder).offset({'left':(-1 * STOCKS_WIDTH)});
@@ -40,4 +38,24 @@ $(document).ready(function() {
 		}
 		count += 1;
 	}
+
+	$(window).resize(function() {
+		if(this.resizeTO) clearTimeout(this.resizeTO);
+		clearInterval(timer);
+		this.resizeTO = setTimeout(function() {
+			$(this).trigger('resizeEnd');
+		}, 10);
+	});
+
+	$(window).bind('resizeEnd', function() {
+		var i = 0;
+		for (i; i <= stocks.length - 1; i++) {
+			var offset = $("#" + stocks[i]).offset();
+			var temp = offset.left;
+			$("#" + stocks[i]).offset({'left':temp});
+		}
+		timer = setInterval(function() {
+			moveStocks(stocks);
+		},60);
+	});
 });
