@@ -7,5 +7,50 @@
 	display: inline-block;
 	overflow: hidden;
 	height: 120px;
-	width: 120px;
+	width: 200px;
+	z-index: -1;
+}
+
+#topRowStocks {
+	white-space: nowrap;
+}
+
+#topStock1 {
+	background-color: green;
+}
+
+#topStock2 {
+	background-color: blue;
+}
+
+#topStock3 {
+	background-color: black;
+}
+
+#topStock4 {
+	background-color: red;
+}
+
+#topStock5 {
+	background-color: cyan;
+}
+
+#topStock6 {
+	background-color: purple;
+}
+
+#topStock7 {
+	background-color: yellow;
+}
+
+#topStock8 {
+	background-color: orange;
+}
+
+#topStock9 {
+	background-color: #973206;
+}
+
+#topStock10 {
+	background-color: #239782;
 }

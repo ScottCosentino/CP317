@@ -43,13 +43,53 @@
 		</div>
 		<!-- MainArea -->
 		<div class="col-md-10 col-sm-9">
-			<div class="row">
+			<div class="row" id="topRowStocks">
 				<div id="topStock1" class="panel panel-default recStock">
 					<div class="panel-body">
 
 					</div>
 				</div>
 				<div id="topStock2" class="panel panel-default recStock">
+					<div class="panel-body">
+
+					</div>
+				</div>
+				<div id="topStock3" class="panel panel-default recStock">
+					<div class="panel-body">
+
+					</div>
+				</div>
+				<div id="topStock4" class="panel panel-default recStock">
+					<div class="panel-body">
+
+					</div>
+				</div>
+				<div id="topStock5" class="panel panel-default recStock">
+					<div class="panel-body">
+
+					</div>
+				</div>
+				<div id="topStock6" class="panel panel-default recStock">
+					<div class="panel-body">
+
+					</div>
+				</div>
+				<div id="topStock7" class="panel panel-default recStock">
+					<div class="panel-body">
+
+					</div>
+				</div>
+				<div id="topStock8" class="panel panel-default recStock">
+					<div class="panel-body">
+
+					</div>
+				</div>
+				<div id="topStock9" class="panel panel-default recStock">
+					<div class="panel-body">
+
+					</div>
+				</div>
+				<div id="topStock10" class="panel panel-default recStock">
 					<div class="panel-body">
 
 					</div>

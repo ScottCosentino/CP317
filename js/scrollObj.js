@@ -1,21 +1,27 @@
 $(document).ready(function() {
 	
-	var stocks = ["topStock1","topStock2"];
+	$("#topRowStocks").offset({'left':'0'});
+
+	var stocks = ["topStock1","topStock2","topStock3","topStock4","topStock5","topStock6","topStock7","topStock8","topStock9","topStock10"];
 
 	setInterval(function() {
 		moveStocks(stocks);
-	},500);
+	},10);
 
 	function moveStocks(stocks) {
 		i = 0;
 		
-		for (i; i < stocks.length; i++) {
-			var temp = $("#" + stocks[i]).position().left + 1;
-			$("#" + stocks[i]).css({'left':temp});
-			console.log(stocks[i]);
-			console.log(i);
-			console.log(temp);
-			console.log($("#" + stocks[i]).position().left);
+		for (i; i <= stocks.length - 1; i++) {
+			var offset = $("#" + stocks[i]).offset();
+			var temp = offset.left + 1;
+			$("#" + stocks[i]).offset({'left':temp});
+			if (offset.left > window.innerWidth) {
+				var holder = stocks.pop();
+				console.log(stocks);
+				stocks.unshift(holder);
+				console.log(stocks);
+				$("#" + holder).offset({'left':"0"});
+			}
 		}
 	}
 
