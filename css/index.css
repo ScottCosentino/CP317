@@ -1,0 +1,11 @@
+.body,.html {
+	overflow: hidden;
+}
+
+.recStock {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	height: 120px;
+	width: 120px;
+}

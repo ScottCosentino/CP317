@@ -8,7 +8,7 @@
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 	<!-- Navigation -->
@@ -43,7 +43,19 @@
 		</div>
 		<!-- MainArea -->
 		<div class="col-md-10 col-sm-9">
-			<div id="mainDiv">
+			<div class="row">
+				<div id="topStock1" class="panel panel-default recStock">
+					<div class="panel-body">
+
+					</div>
+				</div>
+				<div id="topStock2" class="panel panel-default recStock">
+					<div class="panel-body">
+
+					</div>
+				</div>
+			</di>
+			<div id="mainDiv" class="row">
 			</div>
 		</div>
 	</div> <!-- /.row -->
@@ -60,5 +72,6 @@
     <script src="components/Highstock/js/highstock.js"></script>
 	<script src="components/Highstock/js/modules/exporting.js"></script>
 	<script src="js/candleGraph.js"></script>
+	<script src="js/scrollObj.js"></script>
 </body>
 </html>
