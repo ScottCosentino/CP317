@@ -1,8 +1,9 @@
-function StockInfo(symbol, startDate, endDate) {
+function StockInfo(symbol, startDate, endDate, currentIndex) {
     this.symbol = symbol;
     this.startDate = startDate;
     this.endDate = endDate;
     this.historical = null;
+    this.currentIndex = currentIndex;
 }
 
 StockInfo.prototype = {
@@ -108,24 +109,12 @@ StockInfo.prototype = {
         }
     },
     updateCurrent: function() {
-        $.ajax({
-            type: "GET",
-            url: "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20('AAPL')&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=updateJSONCurrent",
-            dataType: "jsonp",
-            jsonp: "callback",
-            jsonpCallback: "updateJSONCurrent",
-            async: false
+        $.post("../php/getStock.php",
+        {
+            symbol:this.symbol
         });
-
-        updateJSONCurrent = function(data) {
-            console.log(data.query.results.quote);
-            $("#tickerPanel1").text(data.query.results.quote.Symbol);
-            if (data.query.results.quote.Currency === "USD") {
-                $("#pricePanel1").text("$" + data.query.results.quote.Ask);
-            }else {
-                $("#pricePanel1").text(data.query.results.quote.Ask);
-            }
-            $("#upDownPanel1").text(data.query.results.quote.ChangeinPercent);
-        }
+        $.get("../php/getStock.php",function(data){
+            alert(data);
+        });
     }
 }

@@ -1,6 +1,6 @@
 $(document).ready(function() {
-	
-	//$("#topRowStocks").offset({'left':'-200'});
+
+	// To create/update scroll across
 
 	var stocks = ["topStock1","topStock2","topStock3","topStock4","topStock5","topStock6","topStock7","topStock8","topStock9","topStock10"];
 
@@ -58,4 +58,21 @@ $(document).ready(function() {
 			moveStocks(stocks);
 		},60);
 	});
+
+	updateStocks(stocks);
+	function updateStocks(stocks) {
+		// create list of StockInfo objects
+		var i = 0;
+		var stockInfoSet = [];
+		for (i; i < 10; i++) {
+			// create current object
+			var stockInfo = new StockInfo('AAPL',null,null,i);
+			stockInfoSet.push(stockInfo);
+		}
+		console.log(stockInfoSet);
+		var j = 0;
+		for(j; j < 10; j++) {
+			stockInfoSet[j].updateCurrent();
+		}
+	}
 });
