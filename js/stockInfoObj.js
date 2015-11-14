@@ -10,18 +10,16 @@ StockInfo.prototype = {
     getHistoric: function() {
         return this.historical;
     },
-    newHistoricGraph: function() {
+    newHistoricGraph: function(canvasIdNum) {
         console.log("here");
-        $.ajax({
-            type: "GET",
-            url: "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20%20%20yahoo.finance.historicaldata%20where%20%20symbol%20%20%20%20%3D%20'AAPL'%20and%20%20%20%20startDate%20%3D%20%222012-09-11%22and%20%20%20%20endDate%20%20%20%3D%20%222014-02-11%22%20%7C%20sort(field%3D%22*%22%2C%20descending%3D%22false%22)&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=createHistGraph",
-            dataType: "jsonp",
-            jsonp: "callback",
-            jsonpCallback: "createHistGraph",
-            async: false
-        });
 
-        createHistGraph = function(data) {
+        function histCallback(canvasIdNum) {
+            return function(data) {
+                createHistGraph(data,canvasIdNum);
+            };
+        }
+
+        createHistGraph = function(data,canvasIdNum) { 
             this.historical = data.query.results.quote;
             //slpit the data set into ohlc and volume
              var ohlc = [],
@@ -52,36 +50,57 @@ StockInfo.prototype = {
                     parseFloat(data.query.results.quote[i].Volume),
                 ]);
             }
-
-            console.log(ohlc);
             
-            $("#container").highcharts("StockChart", {
+            $("#stockGraph" + (canvasIdNum + 1)).highcharts("StockChart", {
 
                 rangeSelector: {
                     selected: 1
                 },
 
                 title: {
-                    text: "Apple"
+                    text: data.query.results.quote[0].Symbol,
+                    style: {
+                        color: "white"
+                    }
                 },
+
+                xAxis: [{
+                    labels: {
+                        style: {
+                            color: "white"
+                        }
+                    }
+                }],
 
                 yAxis: [{
                     labels: {
                         align: 'right',
-                        x: -3
+                        x: -3,
+                        style: {
+                            color: "white"
+                        }
                     },
                     title: {
-                        text: 'OHLC'
+                        text: 'OHLC',
+                        style: {
+                            color: "white"
+                        }
                     },
                     height: "60%",
                     lineWidth: 2
                 }, {
                     labels: {
                         align: 'right',
-                        x: -3
+                        x: -3,
+                        style: {
+                            color: "white"
+                        }
                     },
                     title: {
-                        text: "Volume"
+                        text: "Volume",
+                        style: {
+                            color: "white"
+                        }
                     },
                     top: "65%",
                     height: "35%",
@@ -89,9 +108,32 @@ StockInfo.prototype = {
                     lineWidth: 2
                 }],
 
+                plotOptions: {
+                    candlestick: {
+                        color: "red",
+                        upColor: "green"
+                    },
+                    column: {
+                        color: "white"
+                    }
+                },
+
+                chart: {
+                    backgroundColor: "#6A6A6A",
+                    shadow: {
+                        color: "#8C8C8C",
+                        width: 5,
+                        offsetX: 0,
+                        offsetY: 0
+                    },
+                    style: {
+                        color: "white"
+                    }
+                },
+
                 series: [{
                     type: "candlestick",
-                    name: "AAPL",
+                    name: data.query.results.quote[0].Symbol,
                     data: ohlc,
                     dataGrouping: {
                         units: groupingUnits
@@ -104,9 +146,30 @@ StockInfo.prototype = {
                     dataGrouping: {
                         units: groupingUnits
                     }
-                }]
+                }],
+
+                navigator: {
+                    handles: {
+                        backgroundColor: "#666",
+                        borderColor: "#AAA"
+                    },
+                    outlineColor: "#CCC",
+                    maskFill: "rgba(255,255,255,.1)",
+                    series: {
+                        lineColor: "white"
+                    },
+                    xAxis: {
+                        series: {
+                            style: {
+                                color: "white"
+                            }
+                        }
+                    }
+                }
             });
         }
+
+        $.getJSON("https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20%20%20yahoo.finance.historicaldata%20where%20%20symbol%20%20%20%20%3D%20'" + this.symbol + "'%20and%20%20%20%20startDate%20%3D%20%222012-09-11%22and%20%20%20%20endDate%20%20%20%3D%20%222014-02-11%22%20%7C%20sort(field%3D%22*%22%2C%20descending%3D%22false%22)&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys",histCallback(canvasIdNum));
     },
     updateCurrent: function() {
         function updateCallBack(index) {
