@@ -46,22 +46,23 @@
 			<div id="firstRow" class="row">
 				<div id="topRowStocks">
 				<div id="topStock1" class="panel panel-default recStock">
-					<div class="panel-body">
-						<div class="row">
-							<div class="col-lg-10">
-								<div class="row">
-									<p id="tickerPanel1"></p>
-								</div> <!-- /.ticker -->
-								<div class="row"> 
-									<p id="pricePanel1"></p>
-								</div> <!-- /.price -->
-							</div> <!-- /.col-10-lg -->
-							<div class="col-lg-2">
-								<div class="row">
-									<p id="upDownPanel1"></p>
-								</div> <!-- /.up/down -->
-							</div> <!-- /.col-2-lg -->
-						</div>
+					<div class="panel-body stockPanel">
+						<div class="col-lg-5 ticker">
+							<div class="row tickerPanel">
+								<p id="tickerPanel1"></p>
+							</div> <!-- /.ticker -->
+						</div> <!-- /.col-10-lg -->
+						<div class="col-lg-7 percent">
+							<div class="row pricePanel"> 
+								<p class="askPanel">Ask:</p>
+								<p id="pricePanel1" class="askPrice"></p>
+							</div> <!-- /.price -->
+							<div class="row percentPanel">
+								<p class="changePanel">Change:</p>
+								<p id="upDownPanel1" class="changeP"></p>
+								<!--<span class="upBoxTicker glyphicon glyphicon-triangle-top"></span>-->
+							</div>
+						</div> <!-- /.col-2-lg -->
 					</div> <!-- /. panel-body -->
 				</div>
 				<div id="topStock2" class="panel panel-default recStock">

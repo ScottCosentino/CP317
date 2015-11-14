@@ -4,7 +4,7 @@ $(document).ready(function() {
 
 	var stocks = ["topStock1","topStock2","topStock3","topStock4","topStock5","topStock6","topStock7","topStock8","topStock9","topStock10"];
 
-	var STOCKS_WIDTH = 200;
+	var STOCKS_WIDTH = 250;
 
 	setStocks(stocks);
 	function setStocks(stocks) {
