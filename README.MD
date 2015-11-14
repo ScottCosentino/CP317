@@ -62,18 +62,113 @@ DESCRIPTION:
 			This function resizes the sidebar so that the height of the sidebar ALWAYS extends the height of the window. The function gathers both the #mainDiv height and the window height and compares which one is larger and sets the #sideBarId to the larger of the two.
 
 *-----------------*
-FILE: main.js
+FILE: stockInfoObj.js
 CREATED BY: Matthew Warner - 130151700
 DESCRIPTION:
 	
-	This file is used for all of the javacsript needed in the template of the site. This includes the #sideBarId and the navigation bar located at the top of the window.
+	This an object which creates the various graphs used throuhgout the website.
+
+	FUNCTIONS:
+
+		getHistoric()
+
+			This function is used to get the historic value for the object instance.
+
+		newHistoricGraph()
+
+			This function is used to create and display the historic graphs that are predomenantly used in the portfolio page.
+
+			FUNCTIONS:
+
+			createHistGraph()
+
+				This function houses the code to create and fill the canvas with the historic graph. It is a callback function from the ajax request.
+
+		updateCurrent()
+
+			This function is purely used to update the content of the scolling ticker info found at the top just below the navbar on all pages.
+
+			FUNCTIONS:
+
+			updateCallBack(index)
+
+				This function is used as the callback function to allow us to pass the currentindex that was passed when creating the object. 
+
+				PARAMETERS:
+
+					index
+
+						see updateContent(data,index)
+
+				RETURNS:
+
+				updateContent(data,index)
+
+			updateContent(data,index)
+
+				This function is used to update the scrolling ticker info panels text.
+
+				PARAMETERS:
+
+					data
+
+						this is the data that is returned by the $.getJSON call.
+
+					index
+
+						this is the index which was passed when creating the function. This is used to determine which panel id to target when dynamically populating the website content.
 
 *-----------------*
-FILE: stockgraphs.js
+FILE: scrollObj.js
 CREATED BY: Matthew Warner - 130151700
 DESCRIPTION:
 	
-	This file is used as a utility. Its purpose is to dynamically create a line graph that can be included throughout the website.
+	This file is called when the document is ready. It houses all the functions needed to create scrolling stock info panels. It also is responsible for moving all of the scrolling stock info panels.
+
+	FUNCTIONS:
+
+		setStocks(stocks)
+
+			This function sets the position of each of the ten stocks that are displayed in the scrolling stock panels (SSP).
+
+			PARAMETERS:
+
+				stocks
+
+					this houses all of the stocks ticker names that are used on the SSP
+
+		moveStocks(stocks)
+
+			This function is used to move each of the stocks on the SSP.
+
+			PARAMETERS
+
+				stocks
+
+					see setStocks(stocks)
+
+		$(window).resize()
+
+			This function is called every time the user resizes the page. It is used to adjust the left offset of each of the SSP's. This function triggers $(window).bind('resizeEnd').
+
+		$(window).bind('resizeEnd')
+
+			This function is called when the $(window).resize() function triggers 'resizeEnd'. This functions purpose is to agjust the left offset of each of the SSP to the new offset of the page.
+
+		updateStocks(stocks,tickers)
+
+			This function is used to update each of the SSP. It does this through making a new instance of StockInfo() and calling stockInfo.updateCurrent() which in return populates the content in the SSP.
+
+			PARAMETERS
+
+				stocks
+
+					This is used for the length of the stock panels contained within the SSP.
+
+				tickers
+
+					This is used for the ticker names that are used to update the SSP.
+
 
 *-----------------*
 GENERAL NOTES:

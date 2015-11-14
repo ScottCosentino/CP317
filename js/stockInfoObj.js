@@ -109,12 +109,28 @@ StockInfo.prototype = {
         }
     },
     updateCurrent: function() {
-        $.post("../php/getStock.php",
-        {
-            symbol:this.symbol
-        });
-        $.get("../php/getStock.php",function(data){
-            alert(data);
-        });
+        function updateCallBack(index) {
+            return function(data) {
+                updateContent(data,index);
+            };
+        }
+
+        function updateContent(data,index) {
+            $("#tickerPanel" + (index + 1)).text(data.query.results.quote.Symbol);
+            if (data.query.results.quote.Currency === "USD") {
+                $("#pricePanel" + (index + 1)).text("$" + data.query.results.quote.Ask);
+            }
+            var changePercent = data.query.results.quote.ChangeinPercent;
+            var plusMinus = changePercent.slice(0,1);
+            var plusMinusObj = document.getElementById("upDownPanel" + (index + 1));
+            if (plusMinus === "-") {
+                plusMinusObj.style.color = "red";
+            }else if (plusMinus === "+") {
+                plusMinusObj.style.color = "#79D541";
+            }
+            $("#upDownPanel" + (index + 1)).text(data.query.results.quote.ChangeinPercent);
+        }
+
+        $.getJSON("https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20(" + this.symbol + ")&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys",updateCallBack(this.currentIndex));
     }
 }

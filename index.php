@@ -60,7 +60,7 @@
 								<div class="row percentPanel">
 									<p class="changePanel">Change:</p>
 									<p id="upDownPanel1" class="changeP"></p>
-								ß	<!--<span class="upBoxTicker glyphicon glyphicon-triangle-top"></span>-->
+									<!--<span class="upBoxTicker glyphicon glyphicon-triangle-top"></span>-->
 								</div>
 							</div> <!-- /.col-7-lg -->
 						</div> <!-- /. panel-body -->
@@ -249,9 +249,10 @@
 			<div id="mainDiv" class="row"></div>
 		</div>
 	</div> <!-- /.row -->
+</div>
 	<footer class="footer">
 		<div class="container">
-			<p>Here is some text</p>
+			<p>&copy; AdviseMe 2014-<?php echo date("Y"); ?></p>
 		</div>
 	</footer>
 
@@ -267,5 +268,6 @@
     <script src="components/Highstock/js/highstock.js"></script>
 	<script src="components/Highstock/js/modules/exporting.js"></script>
 	<script src="js/scrollObj.js"></script>
+	<script src="js/portfolio.js"></script>
 </body>
 </html>
