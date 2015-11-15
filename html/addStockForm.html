@@ -1,0 +1,37 @@
+<div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+  <h4 class="modal-title searchText">Search Stocks</h4>
+</div>      <!-- /modal-header -->
+<div class="modal-body">
+  <div class="input-group">
+    <input type="text" id="searchInput" class="form-control" style="color:black;" placeholder="Search...">
+    <span class="input-group-btn">
+      <button class="btn btn-secondary" style="height:34px;" type="button" onclick="javascript:searchStocks()">
+        <span class="glyphicon glyphicon-search"></span>
+      </button>
+    </span>
+  </div>
+  <div class="row">
+    <p class="compName searchText"></p>
+    <div class="col-sm-6 col-xs-12">
+      <p class="searchText searchDis">Ask:</p>
+      <p class="askP searchText"></p>
+      <p class="searchText searchDis">Change:</p>
+      <p class="changeP searchText"></p>
+      <p class="searchText searchDis">Year Range:</p>
+      <p class="yearrangeP searchText"></p>
+    </div>
+    <div class="col-sm-6 col-xs-12">
+      <p class="searchText searchDis">Volume:</p>
+      <p class="volumeP searchText"></p>
+      <p class="searchText searchDis">Short Ratio:</p>
+      <p class="shortP searchText"></p>
+      <p class="searchText searchDis">Bid:</p>
+      <p class="bidP searchText"></p>
+    </div>
+  </div>
+</div>      <!-- /modal-body -->
+<div class="modal-footer">
+  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+  <button type="button" class="btn btn-primary">Add To Your Stocks</button>
+</div>      <!-- /modal-footer -->

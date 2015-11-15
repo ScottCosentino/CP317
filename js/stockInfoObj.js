@@ -57,6 +57,12 @@ StockInfo.prototype = {
                     selected: 1
                 },
 
+                events: {
+                    click: function() {
+                        alert("click");
+                    }
+                },
+
                 title: {
                     text: data.query.results.quote[0].Symbol,
                     style: {
@@ -106,6 +112,14 @@ StockInfo.prototype = {
                     height: "35%",
                     offset: 0,
                     lineWidth: 2
+                }],
+
+                plotBands: [{
+                    events: {
+                        click: function() {
+                            console.log("band click");
+                        }
+                    }
                 }],
 
                 plotOptions: {
@@ -195,5 +209,27 @@ StockInfo.prototype = {
         }
 
         $.getJSON("https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20(" + this.symbol + ")&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys",updateCallBack(this.currentIndex));
+    },
+    searchTicker: function() {
+        function searchCallBack() {
+            return function(data) {
+                returnResults(data);
+            };
+        }
+
+        function returnResults(data) {
+            console.log(data);
+            console.log(this.symbol);
+            $(".compName").text(data.query.results.quote.Name);
+            $(".askP").text(data.query.results.quote.Ask);
+            $(".changeP").text(data.query.results.quote.ChangeinPercent);
+            $(".yearrangeP").text(data.query.results.quote.YearRange);
+            $(".volumeP").text(data.query.results.quote.Volume);
+            $(".shortP").text(data.query.results.quote.ShortRatio);
+            $(".bidP").text(data.query.results.quote.Bid);
+        }
+
+        console.log("in search ticker");
+        $.getJSON("https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20('" + this.symbol + "')&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys",searchCallBack());
     }
 }
