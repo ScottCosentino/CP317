@@ -29,13 +29,19 @@
 				<div id="sideBarId" class="sidebar-nav navbar-collapse">
 					<ul class="nav" id="side-menu">
 						<li>
-							Portfolio
+							<a href="#">
+								Portfolio
+							</a>
 						</li>
 						<li>
-							Stocks
+							<a href="#">
+								Stocks
+							</a>
 						</li>
 						<li>
-							News
+							<a href="#">
+								News
+							</a>
 						</li>
 					</ul>
 				</div>

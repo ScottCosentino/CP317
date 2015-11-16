@@ -33,6 +33,20 @@ body,html {
     box-shadow: 5px 0px 15px -4px rgba(0,10,10,1);
 }
 
+.sideBar ul li a {
+	background-color: green;
+}
+
+.sideBar ul li :hover {
+	background-color: blue;
+}
+
+#sideBarId {
+	padding-top: 50px;
+	padding-left: 0;
+	padding-right: 0;
+}
+
 .recStock {
 	display: inline-block;
 	overflow: hidden;
@@ -255,8 +269,3 @@ input.stock-search-input:-ms-input-placeholder {
 	font-size: 1.2em;
 }
 
-.askP,
-.changeP,
-.yearrangeP {
-
-}
