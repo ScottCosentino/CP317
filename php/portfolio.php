@@ -43,9 +43,13 @@
 			if (!empty($query)) {
 				while($row = mysql_fetch_assoc($query)) {
 					echo"
-						<div class='container graphBox'>
-						<button>View</button>
-						<div id='stockGraph" . $i . "' style='width:30%; height:400px;' class='stockGraph-Area'></div>
+						<div class='col-md-4 col-xs-12'>
+							<div class='row'>
+								<button>View</button>
+							</div>
+							<div class='row'>
+								<div id='stockGraph" . $i . "' style='width:100%; height:400px;' class='stockGraph-Area'></div>
+							</div>
 						</div>
 					";
 					$i++ ;
