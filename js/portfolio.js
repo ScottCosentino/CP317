@@ -29,4 +29,16 @@ $(document).ready(function() {
 			}
 		}
 	});
+
+	$(document).on('click','.viewDetailGraph',function() {
+		var id = this.id;
+		var chart = $('#stockGraph1').highcharts();
+		alert(chart.options.title.text);
+		var chartData = {
+			title: chart.options.title.text
+		};
+		$("#mainDiv").load("php/detailStock.php?chartDataTitle=" + chartData.title + "",function() {
+			resizeSideBar();
+		});
+	});
 });

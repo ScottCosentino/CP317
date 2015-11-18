@@ -57,12 +57,6 @@ StockInfo.prototype = {
                     selected: 1
                 },
 
-                events: {
-                    click: function() {
-                        alert("click");
-                    }
-                },
-
                 title: {
                     text: data.query.results.quote[0].Symbol,
                     style: {
@@ -114,14 +108,6 @@ StockInfo.prototype = {
                     lineWidth: 2
                 }],
 
-                plotBands: [{
-                    events: {
-                        click: function() {
-                            console.log("band click");
-                        }
-                    }
-                }],
-
                 plotOptions: {
                     candlestick: {
                         color: "red",
@@ -134,12 +120,6 @@ StockInfo.prototype = {
 
                 chart: {
                     backgroundColor: "#6A6A6A",
-                    shadow: {
-                        color: "#8C8C8C",
-                        width: 5,
-                        offsetX: 0,
-                        offsetY: 0
-                    },
                     style: {
                         color: "white"
                     }
