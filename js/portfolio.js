@@ -37,7 +37,7 @@ $(document).ready(function() {
 		var chartData = {
 			title: chart.options.title.text
 		};
-		$("#mainDiv").load("php/detailStock.php?chartDataTitle=" + chartData.title + "",function() {
+		$("#mainDiv").load("php/detailStock.php?chartDataTitle=" + chartData.title,function() {
 			resizeSideBar();
 		});
 	});

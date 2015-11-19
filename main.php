@@ -275,7 +275,6 @@
 	<script src="components/Highstock/js/modules/exporting.js"></script>
 	<script src="js/scrollObj.js"></script>
 	<script src="js/portfolio.js"></script>
-	<script src="js/detailStock.js"></script>
 	<script src="js/addNewStock.js"></script>
 </body>
 </html>
